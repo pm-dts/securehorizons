@@ -59,7 +59,7 @@ export default function Footer() {
                   src={brandLogo}
                   alt="Secured Horizon Brand Logo"
                   width={200}
-                  className="w-[210px] h-auto object-contain z-50"
+                  className="w-[210px] h-auto object-contain"
                   priority
                 />
               </Link>
