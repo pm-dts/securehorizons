@@ -26,7 +26,7 @@ export default function Header() {
 
   return (
     // <header className="w-full bg-transparent absolute top-0 left-0 z-50">
-    <header className="fixed top-0 left-0 z-50 w-full bg-white/60 backdrop-blur-xl shadow-lg">
+    <header className="fixed top-0 left-0 z-50 w-full bg-white/50 backdrop-blur-xs shadow-lg">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           {/* Logo Section */}
@@ -51,10 +51,10 @@ export default function Header() {
               >
                 <Link
                   href={link.href}
-                  className={`relative flex items-center gap-1 py-2 text-[11px] font-bold uppercase tracking-wider transition-colors ${
+                  className={`relative flex items-center gap-1 py-2 text-[11px] font-extrabold uppercase tracking-wider transition-colors ${
                     pathname === link.href
                       ? "text-black"
-                      : "text-gray-700 hover:text-black"
+                      : "text-gray-800 hover:text-black"
                   }`}
                 >
                   {link.name}
@@ -76,7 +76,7 @@ export default function Header() {
                         <Link
                           key={subLink.name}
                           href={subLink.href}
-                          className="block px-5 py-2.5 text-sm text-gray-700 hover:text-black hover:bg-gray-300/50 transition-colors"
+                          className="block px-5 py-2.5 text-sm text-gray-800 hover:text-black hover:bg-gray-300/50 transition-colors"
                         >
                           {subLink.name}
                         </Link>
@@ -92,7 +92,7 @@ export default function Header() {
           <div className="lg:hidden flex items-center">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="text-gray-700 hover:text-black focus:outline-none p-2"
+              className="text-gray-800 hover:text-black focus:outline-none p-2"
             >
               {isMobileMenuOpen ? (
                 <X className="w-6 h-6" />
@@ -119,7 +119,7 @@ export default function Header() {
                         setExpandedMobileMenu(isExpanded ? null : link.name)
                       }
                       className={`w-full px-3 py-3 text-sm font-semibold tracking-wider uppercase rounded-md flex justify-between items-center transition-colors
-                        ${pathname === link.href ? "text-black bg-gray-300/50" : "text-gray-700 hover:text-black hover:bg-black/5"}
+                        ${pathname === link.href ? "text-black bg-gray-300/50" : "text-gray-800 hover:text-black hover:bg-black/5"}
                       `}
                     >
                       {link.name}
@@ -132,7 +132,7 @@ export default function Header() {
                       href={link.href}
                       onClick={handleLinkClick}
                       className={`block px-3 py-3 text-sm font-semibold tracking-wider uppercase rounded-md flex justify-between items-center transition-colors
-                        ${pathname === link.href ? "text-black bg-gray-300/50" : "text-gray-700 hover:text-black hover:bg-black/5"}
+                        ${pathname === link.href ? "text-black bg-gray-300/50" : "text-gray-800 hover:text-black hover:bg-black/5"}
                       `}
                     >
                       {link.name}
@@ -147,7 +147,7 @@ export default function Header() {
                           key={subLink.name}
                           href={subLink.href}
                           onClick={handleLinkClick}
-                          className="block py-2 text-sm text-gray-700 hover:text-black transition-colors"
+                          className="block py-2 text-sm text-gray-800 hover:text-black transition-colors"
                         >
                           {subLink.name}
                         </Link>
